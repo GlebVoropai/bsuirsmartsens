@@ -1,7 +1,7 @@
 :root {
-    --accent-color: #3a3a7c;
-    --status-off: red;
-    --status-on: green;
+    --accent-color: #293786;
+    --status-off: #494949;
+    --status-on: #2a40bd;
     --text: #4a4a4a;
     --text-light: #939393;
 }
@@ -10,12 +10,14 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #eee;
     color: var(--text);
-    padding-bottom: 80px;
 }
 
 a {
     text-decoration: none;
     color: var(--text);
+    display: inline-flex;      
+    align-items: center;       
+    gap: 4px;
 }
 
 header {
@@ -26,21 +28,17 @@ header .card-item {
     margin: 0;
 }
 
+
 .nav-link {
     transition: 0.4s;
     border: 1px solid transparent;
     margin: 0 10px;
-    padding: 2px;
     font-size: 18px;
 }
 
 .nav-link:hover, .nav-link.active {
     color: var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
-}
-
-img {
-    /* filter: drop-shadow(0px 4px 4px #44444484); */
 }
 
 .main-container {
@@ -181,9 +179,48 @@ img {
     color: var(--status-off);
 }
 
+.nav-link path{
+    /* fill: var(--accent-color);   */
+    stroke: var(--accent-color);  
+}
+
+.nav-link .about-icon {
+    fill: var(--accent-color);
+}
+
 /* ADAPTIVE VIEW */
+@media (min-width: 769px) {
+    .navigation .card-item svg {
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
+    h3 {
+        margin: 0;
+    }
+    body {
+        padding-bottom: 70px;
+    }
+    .main-container {
+        gap: 5px;
+        padding: 10px;
+    }
+    .card-item {
+        padding: 15px;
+        margin: 5px;
+    }
+    .card-item.device {
+        flex-direction: column-reverse;
+      
+    }
+    .device img {
+      margin: 0 auto;
+    }
+    .card-item.half h3 {
+        margin: 0;
+        padding-bottom: 15px;
+    }
     .navigation {
         position: fixed;
         bottom: 0;
@@ -193,9 +230,22 @@ img {
         padding: 10px 20px;
         margin: 0;     
         box-sizing: border-box; 
+        z-index: 100;
     }
     .navigation .card-item  {
-        justify-content: center;
+        justify-content: space-around;
         gap: 20px;
+    }
+    .navigation .card-item svg {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .navigation .card-item span {
+        display: none;
+    }
+    .nav-link.active {
+        border: 1px solid transparent;
+
     }
 }
