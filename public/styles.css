@@ -206,6 +206,10 @@ header .card-item {
         gap: 5px;
         padding: 10px;
     }
+    .card-group {
+        box-sizing: border-box;
+        width: 49%;
+    }
     .card-item {
         padding: 15px;
         margin: 5px;
@@ -247,5 +251,12 @@ header .card-item {
     .nav-link.active {
         border: 1px solid transparent;
 
+    }
+    .circle-ring {
+        width: 140px;
+        height: 140px;
+    }
+    .device-pic {
+        width: 160px;
     }
 }
