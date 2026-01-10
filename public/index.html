@@ -13,15 +13,15 @@
         <div class="card-group">
             <div class="card-item half temp">
                 <h3>Температура</h3>
-                <div class="circle-ring" style="--value: 0.1">
-                  <span>5.0 °C</span>
+                <div class="circle-ring" id="temp-ring" style="--value: 0.1">
+                  <span id="temp-text-value">5.0 °C</span>
                 </div>
               </div>
               
               <div class="card-item half humid">
                 <h3>Влажность</h3>
-                <div class="circle-ring" style="--value: 0.2">
-                  <span>20.0 %</span>
+                <div class="circle-ring" id="humid-ring" style="--value: 0.2">
+                  <span id="humid-text-value">20.0 %</span>
                 </div>
               </div>
                       
@@ -30,7 +30,7 @@
             <div class="card-item device">
                 <img class="device-pic" src="files/esp8266.png" alt="esp8266">
                 <section>
-                    <h4>ESP8266</h4>
+                    <h3>ESP8266</h3>
                     <p>Основное устройство мониторинга</p>
                 </section>
             </div>
@@ -57,5 +57,6 @@
         </div>
     </div>       
     <script src="scripts/header.js"></script>
+    <script src="scripts/circles.js"></script>
 </body>
 </html>
