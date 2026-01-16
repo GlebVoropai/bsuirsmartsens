@@ -13,15 +13,15 @@
         <div class="card-group">
             <div class="card-item half temp">
                 <h3>Температура</h3>
-                <div class="circle-ring" id="temp-ring" style="--value: 0.1">
-                  <span id="temp-text-value">5.0 °C</span>
+                <div class="circle-ring" id="temp-ring" style="--value: 0.0">
+                  <span id="temp-text-value">N/A</span>
                 </div>
               </div>
               
               <div class="card-item half humid">
                 <h3>Влажность</h3>
-                <div class="circle-ring" id="humid-ring" style="--value: 0.2">
-                  <span id="humid-text-value">20.0 %</span>
+                <div class="circle-ring" id="humid-ring" style="--value: 0.0">
+                  <span id="humid-text-value">N/A</span>
                 </div>
               </div>
                       
@@ -53,10 +53,15 @@
                    </svg>                   
                   <span>N/A</span></div>
             </div>
+            <div class="card-item half uptime">
+              <h3>Аптайм</h3>
+              <span id="uptime-value">N/A</span>
+            </div>
+
             <a class="card-item btn" href="dashboard.html">Перейти к Дашборду</a>
         </div>
     </div>       
     <script src="scripts/header.js"></script>
-    <script src="scripts/circles.js"></script>
+     <script src="scripts/data-sync.js"></script>
 </body>
 </html>
